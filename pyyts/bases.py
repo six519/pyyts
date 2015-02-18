@@ -47,7 +47,8 @@ class BaseEndpoint(object):
 
 class BaseRequestType(object):
 
-    def __init__(self):
+    def __init__(self, app_key=None):
+        self.application_key = app_key
         self.type_name = ""
 
     def __repr__(self):

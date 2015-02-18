@@ -49,3 +49,17 @@ class MovieReviews(BaseEndpoint):
         self.request_param = {
             "movie_id": None
         }
+
+class MovieParentalGuides(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "movie_parental_guides"
+        self.request_param = {
+            "movie_id": None
+        }
+
+class ListUpcoming(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "list_upcoming"
+        self.request_param = {}
