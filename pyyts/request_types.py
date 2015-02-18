@@ -38,6 +38,10 @@ class UsersType(BaseRequestType):
     def user_details(self, **kwargs):
         return UserDetails().request(**kwargs)
 
+    def user_get_key(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return UserGetKey(self, **kwargs).request(**kwargs)
+
     def user_forgot_password(self, **kwargs):
         kwargs["application_key"] = self.application_key
         return UserForgotPassword().request(**kwargs)
