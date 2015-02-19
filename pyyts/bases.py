@@ -1,4 +1,8 @@
-import requests
+try:
+    import requests
+except:
+    pass
+    
 from .defaults import *
 
 class BaseEndpoint(object):
