@@ -29,6 +29,13 @@ class MoviesType(BaseRequestType):
     def list_upcoming(self, **kwargs):
         return ListUpcoming().request(**kwargs)
 
+    def like_movie(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return LikeMovie().request(**kwargs)
+
+    def get_movie_bookmarks(self, **kwargs):
+        return GetMovieBookmarks().request(**kwargs)
+
 class UsersType(BaseRequestType):
 
     def __init__(self, app_key=None):
@@ -56,3 +63,7 @@ class UsersType(BaseRequestType):
     def user_register(self, **kwargs):
         kwargs["application_key"] = self.application_key
         return UserRegister().request(**kwargs)
+
+    def user_reset_password(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return UserResetPassword().request(**kwargs)

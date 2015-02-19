@@ -63,3 +63,14 @@ class UserRegister(BaseEndpoint):
             "password": None,
             "email": None
         }
+
+class UserResetPassword(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "user_reset_password"
+        self.request_type = "post"
+        self.request_param = {
+            "reset_code": None,
+            "new_password": None,
+            "application_key": None
+        }

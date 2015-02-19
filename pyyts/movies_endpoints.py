@@ -63,3 +63,23 @@ class ListUpcoming(BaseEndpoint):
     def init(self):
         self.request_name = "list_upcoming"
         self.request_param = {}
+
+class LikeMovie(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "like_movie"
+        self.request_type = "post"
+        self.request_param = {
+            "user_key": None,
+            "movie_id": None,
+            "application_key": None
+        }
+
+class GetMovieBookmarks(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "get_movie_bookmarks"
+        self.request_param = {
+            "user_key": None,
+            "with_rt_ratings": None
+        }
