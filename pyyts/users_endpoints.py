@@ -30,3 +30,11 @@ class UserGetKey(BaseEndpoint):
             "application_key": None,
             "with_recently_downloaded": None
         }
+
+class UserProfile(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "user_profile"
+        self.request_param = {
+            "user_key": None
+        }
