@@ -3,6 +3,11 @@ pyyts
 
 YTS (http://yts.re) API Client
 
+Install
+=======
+
+```pip install pyyts```
+
 Sample Usage
 ============
 ::
