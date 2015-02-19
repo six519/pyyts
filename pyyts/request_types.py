@@ -91,3 +91,7 @@ class UsersType(BaseRequestType):
     def user_reset_password(self, **kwargs):
         kwargs["application_key"] = self.application_key
         return UserResetPassword().request(**kwargs)
+
+    def make_request(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return MakeRequest().request(**kwargs)

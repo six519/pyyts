@@ -74,3 +74,15 @@ class UserResetPassword(BaseEndpoint):
             "new_password": None,
             "application_key": None
         }
+
+class MakeRequest(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "make_request"
+        self.request_type = "post"
+        self.request_param = {
+            "user_key": None,
+            "movie_title": None,
+            "request_message": None,
+            "application_key": None
+        }
