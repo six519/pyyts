@@ -48,3 +48,11 @@ class UsersType(BaseRequestType):
 
     def user_profile(self, **kwargs):
         return UserProfile().request(**kwargs)
+
+    def user_edit_settings(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return UserEditSettings().request(**kwargs)
+
+    def user_register(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return UserRegister().request(**kwargs)
