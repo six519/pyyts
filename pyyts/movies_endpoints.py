@@ -94,3 +94,59 @@ class AddMovieBookmark(BaseEndpoint):
             "movie_id": None,
             "application_key": None
         }
+
+class DeleteMovieBookmark(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "delete_movie_bookmark"
+        self.request_type = "post"
+        self.request_param = {
+            "user_key": None,
+            "movie_id": None,
+            "application_key": None
+        }
+
+class MakeComment(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "make_comment"
+        self.request_type = "post"
+        self.request_param = {
+            "user_key": None,
+            "movie_id": None,
+            "comment_text": None,
+            "application_key": None
+        }
+
+class LikeComment(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "like_comment"
+        self.request_type = "post"
+        self.request_param = {
+            "user_key": None,
+            "comment_id": None,
+            "application_key": None
+        }
+
+class ReportComment(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "report_comment"
+        self.request_type = "post"
+        self.request_param = {
+            "user_key": None,
+            "comment_id": None,
+            "application_key": None
+        }
+
+class DeleteComment(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "delete_comment"
+        self.request_type = "post"
+        self.request_param = {
+            "user_key": None,
+            "comment_id": None,
+            "application_key": None
+        }

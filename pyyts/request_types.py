@@ -40,6 +40,26 @@ class MoviesType(BaseRequestType):
         kwargs["application_key"] = self.application_key
         return AddMovieBookmark().request(**kwargs)
 
+    def delete_movie_bookmark(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return DeleteMovieBookmark().request(**kwargs)
+
+    def make_comment(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return MakeComment().request(**kwargs)
+
+    def like_comment(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return LikeComment().request(**kwargs)
+
+    def report_comment(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return ReportComment().request(**kwargs)
+
+    def delete_comment(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return DeleteComment().request(**kwargs)
+
 class UsersType(BaseRequestType):
 
     def __init__(self, app_key=None):
