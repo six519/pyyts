@@ -36,6 +36,10 @@ class MoviesType(BaseRequestType):
     def get_movie_bookmarks(self, **kwargs):
         return GetMovieBookmarks().request(**kwargs)
 
+    def add_movie_bookmark(self, **kwargs):
+        kwargs["application_key"] = self.application_key
+        return AddMovieBookmark().request(**kwargs)
+
 class UsersType(BaseRequestType):
 
     def __init__(self, app_key=None):

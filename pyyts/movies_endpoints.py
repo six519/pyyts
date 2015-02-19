@@ -83,3 +83,14 @@ class GetMovieBookmarks(BaseEndpoint):
             "user_key": None,
             "with_rt_ratings": None
         }
+
+class AddMovieBookmark(BaseEndpoint):
+
+    def init(self):
+        self.request_name = "add_movie_bookmark"
+        self.request_type = "post"
+        self.request_param = {
+            "user_key": None,
+            "movie_id": None,
+            "application_key": None
+        }
